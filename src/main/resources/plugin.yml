@@ -1,0 +1,23 @@
+name: Dynamic Auctions
+version: 1.0.0
+main: com.trailblazer.dynamicauctions.DynamicAuctions
+api-version: 1.21
+author: trailblazer_197_05135
+description: A comprehensive Auction House plugin allowing players to list items for auction, bid on them, and manage timed auctions with a user-friendly GUI.
+
+commands:
+  ah:
+    description: Main auction command
+    usage: /ah &lt;subcommand&gt;
+    aliases: [auction]
+
+permissions:
+  dynamicauctions.sell:
+    description: Allows selling items on auction
+    default: true
+  dynamicauctions.bid:
+    description: Allows bidding on auctions
+    default: true
+  dynamicauctions.admin:
+    description: Admin permissions for managing auctions
+    default: op

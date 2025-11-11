@@ -1,0 +1,71 @@
+# AuctionMaster Configuration File
+# ================================
+# This file contains all configurable options for the AuctionMaster plugin.
+# Modify these settings to customize the behavior of your auction house.
+# After making changes, reload the plugin or restart the server.
+# ================================
+
+# ================================
+# Auction Settings
+# ================================
+# Default duration for auctions in minutes (if not specified in command)
+default-auction-time: 10
+
+# Minimum starting bid for any auction
+min-starting-bid: 1.0
+
+# Minimum bid increment (how much higher each bid must be)
+min-bid-increment: 1.0
+
+# Maximum number of active auctions a player can have at once
+max-auctions-per-player: 5
+
+# Maximum allowed auction duration in minutes (24 hours = 1440 minutes)
+max-auction-duration: 1440
+
+# Whether to allow auctions to end early if no bids are placed
+allow-early-end-no-bids: true
+
+# ================================
+# Economy Settings
+# ================================
+# Listing fee charged to create an auction (0.0 to disable)
+listing-fee: 0.0
+
+# Bid fee charged per bid attempt (0.0 to disable)
+bid-fee: 0.0
+
+# Percentage of final sale price taken as commission (0.0 to disable)
+commission-rate: 5.0
+
+# ================================
+# GUI Settings
+# ================================
+# Number of auctions displayed per page in the GUI
+auctions-per-page: 45
+
+# Title of the auction browsing GUI
+gui-title: "&6Auction House"
+
+# ================================
+# Data Settings
+# ================================
+# How often to save auction data in minutes (0 = only on disable)
+auto-save-interval: 5
+
+# ================================
+# Messages
+# ================================
+# Customizable messages for various plugin events
+messages:
+  no-permission: "&cYou don't have permission to use this command."
+  auction-created: "&aAuction created successfully! ID: %id%"
+  auction-ended-no-bids: "&eYour auction (ID: %id%) ended with no bids."
+  auction-ended-sold: "&aYour auction (ID: %id%) sold for %price% to %buyer%!"
+  bid-placed: "&aBid of %amount% placed on auction ID: %id%!"
+  bid-too-low: "&cYour bid must be at least %min% higher than the current bid."
+  auction-not-found: "&cAuction with ID %id% not found."
+  insufficient-funds: "&cYou don't have enough money for this action."
+  max-auctions-reached: "&cYou have reached the maximum number of active auctions (%max%)."
+  invalid-duration: "&cAuction duration must be between 1 and %max% minutes."
+  item-blacklisted: "&cThis item cannot be auctioned."
